@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dr. Western's Vet Clinic</title>
+</head>
+<body>
+<?php
+include 'connectdb.php';
+?>
+<h1>Welcome to the Shop</h1>
+<h2>What would you like to Purchase?</h2>
+<p>
+<hr>
+<p>
+<h2> ADD A NEW PURCHASE:</h2>
+<form action="addnewpet.php" method="post">
+Enter valid customer ID: <input type="text" name="petname"><br>
+Enter Product ID: <input type="text" name="petname"> <br>
+<input type="radio" name="species" value="dog">Dog<br>
+<input type="radio" name="species" value="cat">Cat<br>
+<input type="radio" name="species" value="bird">Bird<br>
+For which customer: <br>
+<?php
+include 'getdata.php';
+?>
+<input type="submit" value="Add New Purchase">
+</form>
+<?php
+mysqli_close($connection);
+?>
+</body>
+</html>

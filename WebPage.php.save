@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Aadam's Web Database </title>
+</head>
+<body>
+	<?php
+		include 'connectdb.php';
+	?> 
+	<h1> Assignment 3 for 3319</h1>
+	<h2> Customers </h2>
+	<form action = "getproducts.php" method="post">
+		<?php
+			include 'customerInfo.php';
+		?>
+		<input type="submit" value="Get Product Names">
+	</form>
+	<h3> Products</h3>
+	<form action = "orderproducts.php" method= "post">
+		<?php
+			include 'productInfo.php';
+		?>
+		<input type="submit" 
+>
+			<select name="order" value="order">
+				<option value="Descending">descend cost</option>
+				<option value="Ascending">ascend cost</option>
+				<option value="Ascending">ascend name</option>
+                                <option value="Ascending">descend name</option>
+			</select>
+	</form>
+	<?php 
+		mysqli_close($connection);
+	?>
+</body>
+</html>
